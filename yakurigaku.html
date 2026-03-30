@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>看護師国試　薬理学総合対策</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@700;900&family=Noto+Sans+JP:wght@400;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0d1117;--sf:#161b22;--sf2:#1f2937;--ac:#58a6ff;--ac2:#f78166;--ac3:#56d364;--ac4:#d2a8ff;--ac5:#e3b341;--tx:#e6edf3;--txd:#8b949e;--bd:#30363d;--pl:#21262d;--r:10px;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Noto Sans JP',sans-serif;background:var(--bg);color:var(--tx);min-height:100vh;}
+header{background:linear-gradient(135deg,#0d1117,#161b22);border-bottom:1px solid var(--bd);padding:16px 24px;position:sticky;top:0;z-index:100;}
+.logo{font-family:'Noto Serif JP',serif;font-size:19px;font-weight:900;background:linear-gradient(135deg,var(--ac),var(--ac4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.sub{font-size:10px;color:var(--txd);letter-spacing:1.5px;font-family:'DM Mono',monospace;margin-top:2px;}
+nav{display:flex;gap:3px;padding:9px 24px;background:var(--sf);border-bottom:1px solid var(--bd);overflow-x:auto;}
+.tab{padding:6px 13px;border-radius:6px;border:none;background:transparent;color:var(--txd);font-family:'Noto Sans JP',sans-serif;font-size:12px;cursor:pointer;transition:all 0.2s;white-space:nowrap;}
+.tab:hover{background:var(--pl);color:var(--tx);}
+.tab.active{background:var(--ac);color:#0d1117;font-weight:700;}
+.stabs{display:flex;gap:4px;padding:10px 0 14px;overflow-x:auto;flex-wrap:wrap;}
+.stab{padding:4px 11px;border-radius:5px;border:1px solid var(--bd);background:transparent;color:var(--txd);font-size:11px;cursor:pointer;transition:all 0.15s;white-space:nowrap;font-family:'Noto Sans JP',sans-serif;}
+.stab:hover{border-color:var(--ac);color:var(--ac);}
+.stab.sa{background:var(--pl);border-color:var(--ac);color:var(--ac);}
+.subsec{display:none;}.subsec.on{display:block;animation:fi 0.25s ease;}
+main{padding:20px 24px;max-width:1100px;margin:0 auto;}
+.section{display:none;animation:fi 0.25s ease;}.section.active{display:block;}
+@keyframes fi{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+.card{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:18px;margin-bottom:14px;}
+.ct{font-family:'Noto Serif JP',serif;font-size:15px;font-weight:700;color:var(--ac);margin-bottom:11px;display:flex;align-items:center;gap:7px;}
+.ico{width:22px;height:22px;background:linear-gradient(135deg,var(--ac),var(--ac4));border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
+.dt{width:100%;border-collapse:collapse;font-size:12px;}
+.dt th{background:var(--sf2);padding:7px 11px;text-align:left;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--txd);font-family:'DM Mono',monospace;border-bottom:1px solid var(--bd);}
+.dt td{padding:8px 11px;border-bottom:1px solid var(--bd);vertical-align:top;line-height:1.55;}
+.dt tr:last-child td{border-bottom:none;}
+.dt tr:hover td{background:var(--pl);}
+.tag{display:inline-block;padding:1px 5px;border-radius:3px;font-size:9px;font-family:'DM Mono',monospace;margin:1px;}
+.tb{background:#1d3557;color:var(--ac);border:1px solid #264a7a;}
+.tr{background:#3b1f1f;color:var(--ac2);border:1px solid #6b3333;}
+.tg{background:#1a3327;color:var(--ac3);border:1px solid #2a5540;}
+.tp{background:#2d1f3d;color:var(--ac4);border:1px solid #4d3566;}
+.ty{background:#2d2500;color:var(--ac5);border:1px solid #5a4a00;}
+.chd{display:flex;align-items:center;gap:8px;margin:20px 0 10px;padding:0 0 8px;border-bottom:2px solid var(--bd);}
+.chd h2{font-family:'Noto Serif JP',serif;font-size:17px;font-weight:900;}
+.bdg{padding:2px 9px;border-radius:20px;font-size:9px;font-family:'DM Mono',monospace;}
+.bp{background:#1d3557;color:var(--ac);border:1px solid #264a7a;}
+.bf{background:#2d1f3d;color:var(--ac4);border:1px solid #4d3566;}
+.nb{border-left:3px solid var(--ac);border-radius:0 6px 6px 0;padding:9px 12px;margin:7px 0;font-size:12px;line-height:1.65;background:linear-gradient(135deg,#1a2744,#1f2937);}
+.nb.w{border-color:var(--ac2);background:linear-gradient(135deg,#2d1a1a,#1f2937);}
+.nb.g{border-color:var(--ac3);background:linear-gradient(135deg,#1a2d1a,#1f2937);}
+.nb.y{border-color:var(--ac5);background:linear-gradient(135deg,#2d2200,#1f2937);}
+.qa-q{font-weight:700;color:var(--ac4);padding:8px 12px;background:var(--pl);border-radius:6px 6px 0 0;border-left:3px solid var(--ac4);font-size:12.5px;}
+.qa-a{font-size:12px;line-height:1.75;padding:9px 12px;background:var(--sf2);border-radius:0 0 6px 6px;border-left:3px solid var(--ac3);margin-bottom:11px;}
+.qa-a strong{color:var(--ac3);}
+/* QUIZ */
+.qc{max-width:680px;margin:0 auto;}
+.pb{height:3px;background:var(--bd);border-radius:2px;margin-bottom:18px;overflow:hidden;}
+.pf{height:100%;background:linear-gradient(90deg,var(--ac),var(--ac4));border-radius:2px;transition:width 0.4s;}
+.qcard{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:22px;margin-bottom:11px;}
+.qt{font-size:13.5px;line-height:1.8;margin-bottom:14px;font-weight:500;}
+.cb{width:100%;text-align:left;padding:11px 14px;border-radius:6px;border:1px solid var(--bd);background:var(--pl);color:var(--tx);font-family:'Noto Sans JP',sans-serif;font-size:12.5px;cursor:pointer;margin-bottom:6px;transition:all 0.15s;line-height:1.5;}
+.cb:hover:not(:disabled){border-color:var(--ac);background:var(--sf2);}
+.cb.correct{border-color:var(--ac3);background:#1a3327;color:var(--ac3);}
+.cb.wrong{border-color:var(--ac2);background:#3b1f1f;color:var(--ac2);}
+.cb:disabled{cursor:default;}
+.eb{background:var(--sf2);border:1px solid var(--bd);border-radius:6px;padding:13px;margin-top:9px;font-size:12px;line-height:1.7;display:none;}
+.eb.show{display:block;animation:fi 0.3s;}
+.btn{padding:8px 18px;border-radius:6px;border:none;font-family:'Noto Sans JP',sans-serif;font-size:12.5px;cursor:pointer;transition:all 0.2s;font-weight:700;}
+.bp2{background:var(--ac);color:#0d1117;}.bp2:hover{background:#79b8ff;}
+.bo{background:transparent;color:var(--tx);border:1px solid var(--bd);}.bo:hover{border-color:var(--ac);color:var(--ac);}
+.sc{text-align:center;padding:36px 20px;}
+.sn{font-family:'Noto Serif JP',serif;font-size:60px;font-weight:900;background:linear-gradient(135deg,var(--ac),var(--ac4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin-bottom:6px;}
+.sl{font-size:12.5px;color:var(--txd);margin-bottom:18px;}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0;}
+.si{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:14px;text-align:center;}
+.sni{font-family:'Noto Serif JP',serif;font-size:30px;font-weight:900;}
+.sli{font-size:10px;color:var(--txd);margin-top:2px;}
+/* FLASH */
+.fa{max-width:560px;margin:0 auto;text-align:center;}
+.fc{perspective:1000px;height:230px;margin-bottom:14px;cursor:pointer;}
+.fi2{width:100%;height:100%;position:relative;transform-style:preserve-3d;transition:transform 0.6s cubic-bezier(0.4,0,0.2,1);}
+.fc.fl .fi2{transform:rotateY(180deg);}
+.ff,.fb{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:var(--r);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;}
+.ff{background:linear-gradient(135deg,#1d3557,#2d1f3d);border:1px solid var(--ac);}
+.fb{background:linear-gradient(135deg,#1a3327,#1f2937);border:1px solid var(--ac3);transform:rotateY(180deg);}
+.fl-l{font-size:9px;letter-spacing:2px;text-transform:uppercase;font-family:'DM Mono',monospace;margin-bottom:7px;}
+.ff .fl-l{color:var(--ac);}.fb .fl-l{color:var(--ac3);}
+.fm{font-size:15px;font-weight:700;font-family:'Noto Serif JP',serif;line-height:1.5;white-space:pre-line;}
+.fs2{font-size:10px;color:var(--txd);margin-top:4px;}
+.fh{font-size:9px;color:var(--txd);margin-top:11px;font-family:'DM Mono',monospace;}
+.fn{display:flex;gap:9px;justify-content:center;align-items:center;}
+.fcn{font-family:'DM Mono',monospace;font-size:11px;color:var(--txd);min-width:50px;}
+/* PROGRESS */
+.cov-bar{background:var(--sf);border:1px solid var(--bd);border-radius:var(--r);padding:16px;margin-bottom:14px;}
+.cov-title{font-size:12px;color:var(--txd);margin-bottom:10px;font-family:'DM Mono',monospace;}
+.cov-row{display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:11.5px;}
+.cov-label{width:160px;flex-shrink:0;color:var(--txd);}
+.cov-track{flex:1;height:6px;background:var(--pl);border-radius:3px;overflow:hidden;}
+.cov-fill{height:100%;border-radius:3px;transition:width 1s;}
+.cov-pct{width:36px;text-align:right;font-family:'DM Mono',monospace;font-size:11px;color:var(--txd);}
+@media(max-width:640px){main{padding:10px 12px;}nav{padding:7px 10px;}header{padding:12px 14px;}.dt{font-size:11px;}.dt th,.dt td{padding:6px 8px;}}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <div class="logo">看護師国試　薬理学総合対策</div>
+    <div class="sub">国試カバー率 80〜90% 目標版 · 全10分野収録</div>
+  </div>
+</header>
+<nav>
+  <button class="tab active" onclick="showTab('text',this)">📖 テキスト</button>
+  <button class="tab" onclick="showTab('table',this)">📊 まとめ表</button>
+  <button class="tab" onclick="showTab('quiz',this)">✏️ 問題演習</button>
+  <button class="tab" onclick="showTab('flash',this)">🃏 フラッシュカード</button>
+  <button class="tab" onclick="showTab('cover',this)">📈 カバー率</button>
+</nav>
+
+<main>
+<!-- ══════════════════════════════
+     TEXT
+══════════════════════════════ -->
+<section id="text" class="section active">
+<div class="stabs">
+  <button class="stab sa"  onclick="showSub('s0',this)">📌 総論</button>
+  <button class="stab" onclick="showSub('s1',this)">❤️ 循環器</button>
+  <button class="stab" onclick="showSub('s2',this)">🧠 精神神経</button>
+  <button class="stab" onclick="showSub('s3',this)">🍬 内分泌・代謝</button>
+  <button class="stab" onclick="showSub('s4',this)">🫁 呼吸器</button>
+  <button class="stab" onclick="showSub('s5',this)">🫀 消化器</button>
+  <button class="stab" onclick="showSub('s6',this)">🦠 抗菌薬</button>
+  <button class="stab" onclick="showSub('s7',this)">🔬 抗癌薬</button>
+  <button class="stab" onclick="showSub('s8',this)">🦴 骨・痛風・免疫</button>
+  <button class="stab" onclick="showSub('s9',this)">💉 自律神経・ステロイド</button>
+</div>
+
+<!-- 総論 -->
+<div class="subsec on" id="s0">
+  <div class="chd" style="margin-top:0;"><h2>📌 薬理総論</h2><span class="bdg bp">基礎</span></div>
+  <div class="card">
+    <div class="qa-q">Q. 血中濃度上昇が最も速い与薬方法は？</div>
+    <div class="qa-a"><strong>A. 静脈内注射</strong>。経口投与は初回通過効果（肝臓）があり最も遅い。</div>
+    <div class="qa-q">Q. 初回通過効果が起こる部位は？</div>
+    <div class="qa-a"><strong>A. 肝臓</strong>。舌下（ニトログリセリン）・坐薬・吸入は初回通過効果を回避。</div>
+    <div class="qa-q">Q. TDM（血中濃度モニタリング）が必要な薬は？</div>
+    <div class="qa-a"><strong>A. ジゴキシン・テオフィリン・バルプロ酸Na・フェニトイン・炭酸リチウム・バンコマイシン・ゲンタマイシン・シクロスポリン</strong></div>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">🍊</span>食べ合わせ・薬物相互作用（頻出）</div>
+    <table class="dt">
+      <tr><th>薬剤</th><th>危険な食品・物質</th><th>影響</th></tr>
+      <tr><td>ワルファリン</td><td>納豆・青汁（禁止）、緑黄色野菜（量を一定に）</td><td>ビタミンKが凝固因子合成↑→抗凝固効果↓</td></tr>
+      <tr><td>Ca拮抗薬</td><td>グレープフルーツ</td><td>CYP3A4阻害→血中濃度↑→過剰降圧</td></tr>
+      <tr><td>テトラサイクリン系</td><td>牛乳・制酸薬（Ca²⁺・Mg²⁺）</td><td>キレート形成→吸収↓</td></tr>
+      <tr><td>ニューキノロン系</td><td>Mg/Al制酸薬・鉄剤</td><td>キレート形成→吸収↓</td></tr>
+      <tr><td>MAO阻害薬</td><td>チーズ・ワイン（チラミン）</td><td>高血圧クリーゼ</td></tr>
+      <tr><td>レボドパ</td><td>高タンパク食</td><td>アミノ酸が競合→吸収↓</td></tr>
+      <tr><td>BZD系・オピオイド</td><td>アルコール</td><td>中枢抑制の相加→呼吸抑制</td></tr>
+      <tr><td>インスリン</td><td>アルコール多飲</td><td>糖新生↓→低血糖増強</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">💉</span>拮抗薬（解毒薬）一覧</div>
+    <table class="dt">
+      <tr><th>原因薬・物質</th><th>拮抗薬</th></tr>
+      <tr><td>ベンゾジアゼピン系</td><td><strong>フルマゼニル</strong></td></tr>
+      <tr><td>オピオイド（モルヒネ等）</td><td><strong>ナロキソン</strong></td></tr>
+      <tr><td>ヘパリン</td><td><strong>プロタミン硫酸塩</strong></td></tr>
+      <tr><td>ワルファリン</td><td><strong>ビタミンK・新鮮凍結血漿</strong></td></tr>
+      <tr><td>有機リン中毒</td><td><strong>アトロピン・PAM（プラリドキシム）</strong></td></tr>
+      <tr><td>アセトアミノフェン過量</td><td><strong>N-アセチルシステイン</strong></td></tr>
+      <tr><td>シアン化合物中毒</td><td><strong>亜硝酸アミル・チオ硫酸Na</strong></td></tr>
+      <tr><td>重金属中毒</td><td><strong>キレート剤（エデト酸Ca等）</strong></td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 循環器 -->
+<div class="subsec" id="s1">
+  <div class="chd" style="margin-top:0;"><h2>❤️ 循環器系の薬</h2><span class="bdg bf">⭐ 重点</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>降圧薬4本柱</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴的副作用</th><th>禁忌</th></tr>
+      <tr><td>ACE阻害薬</td><td>エナラプリル・カプトプリル</td><td><span class="tr tag">空咳（10〜20%）</span>・高K血症・血管神経性浮腫</td><td>妊婦・腎動脈狭窄</td></tr>
+      <tr><td>ARB</td><td>カンデサルタン・ロサルタン</td><td>空咳なし・高K血症</td><td>妊婦</td></tr>
+      <tr><td>Ca拮抗薬（DHP）</td><td>アムロジピン・ニフェジピン</td><td><span class="tr tag">下肢浮腫（10〜15%）</span>・歯肉肥厚・顔面紅潮</td><td>グレープフルーツ</td></tr>
+      <tr><td>ループ利尿薬</td><td>フロセミド（ラシックス）</td><td><span class="tr tag">低K血症</span>・耳毒性（急速静注）・脱水</td><td>—</td></tr>
+      <tr><td>β遮断薬</td><td>プロプラノロール・カルベジロール</td><td>徐脈・低血糖マスク・気管支収縮</td><td>喘息・徐脈</td></tr>
+      <tr><td>K保持性利尿薬</td><td>スピロノラクトン</td><td><span class="tr tag">高K血症</span>・女性化乳房</td><td>—</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">💜</span>強心薬・抗狭心症薬</div>
+    <table class="dt">
+      <tr><th>薬剤名</th><th>適応</th><th>重要事項</th></tr>
+      <tr><td>ジゴキシン</td><td>心不全・心房細動</td><td>中毒：<span class="tr tag">黄色視</span>・悪心・不整脈。低K血症で中毒リスク↑。TDM必須（治療域1.0〜2.0 ng/mL）</td></tr>
+      <tr><td>ニトログリセリン</td><td>狭心症発作</td><td><strong>舌下投与</strong>（内服は初回通過効果で失活）。頭痛・起立性低血圧</td></tr>
+      <tr><td>ドパミン・ドブタミン</td><td>心不全・ショック</td><td>中心静脈ルート必須（血管外漏出→組織壊死）</td></tr>
+      <tr><td>ノルアドレナリン</td><td>敗血症性ショック</td><td>強力な血管収縮・昇圧。中心静脈ルート必須</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">🩸</span>抗凝固薬・抗血小板薬</div>
+    <table class="dt">
+      <tr><th>薬剤</th><th>機序</th><th>効果判定</th><th>拮抗薬</th><th>注意</th></tr>
+      <tr><td>ワルファリン</td><td>ビタミンK依存性凝固因子（Ⅱ・Ⅶ・Ⅸ・Ⅹ）阻害</td><td><span class="tg tag">PT-INR</span>（2.0〜3.0）</td><td>ビタミンK・FFP</td><td>納豆禁止。妊婦禁忌</td></tr>
+      <tr><td>ヘパリン</td><td>アンチトロンビン活性化</td><td><span class="tg tag">APTT</span></td><td>プロタミン硫酸塩</td><td>即効性。HIT注意</td></tr>
+      <tr><td>アスピリン</td><td>COX阻害→血小板凝集抑制（不可逆）</td><td>臨床症状</td><td>—</td><td>低用量100mg。消化性潰瘍</td></tr>
+      <tr><td>DOAC（新規経口）</td><td>Xa因子・トロンビン直接阻害</td><td>臨床症状</td><td>—</td><td>ダビガトラン・リバーロキサバン等</td></tr>
+    </table>
+    <div class="nb w" style="margin-top:10px;">⚠️ 出血徴候観察：皮下出血・歯肉出血・黒色便・血尿・頭痛（脳出血）。脳出血疑いは緊急報告！</div>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">💧</span>利尿薬と電解質管理</div>
+    <table class="dt">
+      <tr><th>電解質</th><th>正常値</th><th>低下時の症状</th><th>上昇時の症状</th></tr>
+      <tr><td>K（カリウム）</td><td>3.5〜5.0 mEq/L</td><td>不整脈・筋力低下・腸管麻痺</td><td>不整脈・心停止（高K）</td></tr>
+      <tr><td>Na（ナトリウム）</td><td>135〜145 mEq/L</td><td>意識障害・痙攣・頭痛</td><td>口渇・浮腫・高血圧</td></tr>
+      <tr><td>Ca（カルシウム）</td><td>8.4〜10.4 mg/dL</td><td>テタニー・しびれ・QT延長</td><td>意識障害・骨痛・腎結石</td></tr>
+      <tr><td>Mg（マグネシウム）</td><td>1.8〜2.4 mg/dL</td><td>テタニー・不整脈・痙攣</td><td>徐脈・血圧低下</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 精神神経 -->
+<div class="subsec" id="s2">
+  <div class="chd" style="margin-top:0;"><h2>🧠 精神神経系の薬</h2><span class="bdg bf">⭐ 重点</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>抗精神病薬・抗うつ薬・気分安定薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>副作用・注意</th></tr>
+      <tr><td><span class="tb tag">定型抗精神病薬</span></td><td>ハロペリドール・クロルプロマジン</td><td><span class="tr tag">EPS</span>（アカシジア・パーキンソン症状・遅発性ジスキネジア）が多い</td></tr>
+      <tr><td><span class="tp tag">非定型抗精神病薬</span></td><td>オランザピン・リスペリドン・クエチアピン</td><td>EPS少ない。<span class="tr tag">高血糖・体重増加</span>（オランザピン）。糖尿病患者に禁忌</td></tr>
+      <tr><td>SSRI</td><td>フルボキサミン・パロキセチン・セルトラリン</td><td>MAOI併用禁忌（セロトニン症候群）。中断症候群。効果発現2〜4週</td></tr>
+      <tr><td>SNRI</td><td>デュロキセチン・ベンラファキシン</td><td>疼痛にも有効。中断症候群あり</td></tr>
+      <tr><td>三環系（TCA）</td><td>アミトリプチリン・イミプラミン</td><td>抗コリン作用（口渇・便秘・尿閉）・起立性低血圧・過量で心毒性</td></tr>
+      <tr><td>気分安定薬</td><td>炭酸リチウム</td><td>TDM必須（0.6〜1.2 mEq/L）。中毒：振戦・嘔吐・意識障害・構音障害</td></tr>
+      <tr><td>気分安定薬</td><td>バルプロ酸ナトリウム</td><td>双極性障害・てんかん。<span class="tr tag">妊婦禁忌</span>（神経管閉鎖障害）</td></tr>
+    </table>
+    <div class="nb w">⚠️ <strong>悪性症候群</strong>：抗精神病薬の重大副作用。高体温・筋強剛・意識障害・CPK上昇 → 即時中止<br>⚠️ <strong>セロトニン症候群</strong>：SSRI+MAOI。不安・焦燥・発熱・ミオクローヌス → 即時中止</div>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">😴</span>睡眠薬・抗不安薬・抗てんかん薬・抗認知症薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴・副作用</th></tr>
+      <tr><td>BZD系（睡眠・抗不安）</td><td>ジアゼパム・トリアゾラム・ニトラゼパム</td><td>依存性・筋弛緩（高齢者転倒）・呼吸抑制。拮抗薬：フルマゼニル</td></tr>
+      <tr><td>非BZD系睡眠薬</td><td>ゾルピデム・エスゾピクロン</td><td>筋弛緩少ない。入眠困難に有効</td></tr>
+      <tr><td>メラトニン受容体</td><td>ラメルテオン</td><td>依存性なし。高齢者に比較的安全</td></tr>
+      <tr><td>オレキシン拮抗</td><td>スボレキサント</td><td>依存性なし。悪夢あり得る</td></tr>
+      <tr><td>抗てんかん薬</td><td>フェニトイン・カルバマゼピン・バルプロ酸</td><td>フェニトイン：歯肉増殖。カルバマゼピン：SJS。両者とも妊婦禁忌</td></tr>
+      <tr><td>ChEI（抗認知症）</td><td>ドネペジル・リバスチグミン（貼付）</td><td>アルツハイマー・レビー小体型。副作用：嘔吐・下痢</td></tr>
+      <tr><td>NMDA拮抗（抗認知症）</td><td>メマンチン</td><td>中〜重度アルツハイマー。ドネペジルと併用可</td></tr>
+      <tr><td>抗パーキンソン</td><td>レボドパ（L-dopa）</td><td>On-off現象・ジスキネジア。高タンパク食で吸収↓。抗精神病薬で症状悪化</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 内分泌・代謝 -->
+<div class="subsec" id="s3">
+  <div class="chd" style="margin-top:0;"><h2>🍬 内分泌・代謝系の薬</h2><span class="bdg bf">⭐ 重点（新規追加）</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💉</span>インスリン製剤の分類（国試頻出）</div>
+    <div class="nb y">💡 作用発現と持続時間が最頻出！「超速効型→食直前、中間型・持効型→就寝前」が基本パターン</div>
+    <table class="dt">
+      <tr><th>種類</th><th>代表薬</th><th>効果発現</th><th>持続時間</th><th>投与タイミング</th></tr>
+      <tr><td><span class="tg tag">超速効型</span></td><td>ノボラピッド（アスパルト）<br>ヒューマログ（リスプロ）</td><td>10〜20分</td><td>3〜5時間</td><td><strong>食直前（0〜15分前）</strong></td></tr>
+      <tr><td><span class="tb tag">速効型（R）</span></td><td>ヒューマリンR</td><td>30分</td><td>5〜8時間</td><td><strong>食前30分</strong></td></tr>
+      <tr><td><span class="tp tag">中間型（N）</span></td><td>ヒューマリンN（NPH）</td><td>1〜3時間</td><td>18〜24時間</td><td>1〜2回/日</td></tr>
+      <tr><td><span class="ty tag">混合型</span></td><td>ノボリン30R</td><td>30分</td><td>—</td><td>食前30分</td></tr>
+      <tr><td><span class="tr tag">持効型</span></td><td>ランタス（グラルギン）<br>レベミル（デテミル）</td><td>1〜2時間</td><td>24時間（平坦）</td><td><strong>就寝前（1回/日）</strong></td></tr>
+    </table>
+    <div class="nb w" style="margin-top:10px;">
+      ⚠️ <strong>低血糖（最重要副作用）</strong>：血糖70mg/dL未満。症状：発汗・動悸・振戦・意識障害。<br>
+      対応：意識あり→ブドウ糖10〜20g内服。意識なし→50%ブドウ糖液静注またはグルカゴン筋注<br>
+      注意：SU薬（スルホニルウレア）との併用で低血糖リスク↑↑
+    </div>
+    <div class="nb">💊 インスリン保存：<strong>未開封→冷蔵庫（2〜8℃）。開封後→室温（30℃以下）で28日以内。凍結禁止。</strong></div>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>経口血糖降下薬（2型糖尿病）</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>機序</th><th>特徴・副作用</th></tr>
+      <tr><td>SU薬（スルホニルウレア）</td><td>グリベンクラミド・グリクラジド</td><td>膵β細胞からインスリン分泌促進</td><td><span class="tr tag">低血糖（最大のリスク）</span>・体重増加</td></tr>
+      <tr><td>BG薬（ビグアナイド）</td><td>メトホルミン</td><td>肝臓での糖新生抑制</td><td>第一選択薬（肥満2型）。<span class="tr tag">乳酸アシドーシス</span>（重篤）。腎機能低下で禁忌</td></tr>
+      <tr><td>DPP-4阻害薬</td><td>シタグリプチン（ジャヌビア）<br>アログリプチン</td><td>インクレチン分解阻害→食後血糖↓</td><td>低血糖少ない。膵炎に注意</td></tr>
+      <tr><td>SGLT2阻害薬</td><td>エンパグリフロジン・ダパグリフロジン</td><td>腎臓でのブドウ糖再吸収阻害→尿中排泄</td><td>体重減少・血圧低下。<span class="tr tag">尿路感染症・性器感染症</span>・ケトアシドーシス</td></tr>
+      <tr><td>GLP-1受容体作動薬</td><td>セマグルチド・リラグルチド</td><td>インスリン分泌促進（血糖依存性）</td><td>体重減少。注射薬（セマグルチドは内服あり）。悪心・嘔吐</td></tr>
+      <tr><td>αGI（α-グルコシダーゼ阻害）</td><td>アカルボース・ボグリボース</td><td>炭水化物の消化吸収を遅延</td><td>食直前に服用。放屁・腹部膨満。<span class="tr tag">低血糖時はブドウ糖（砂糖無効）</span></td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">🦋</span>甲状腺・副腎・骨粗鬆症の薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>適応・副作用</th></tr>
+      <tr><td>抗甲状腺薬</td><td>チアマゾール（MMI）<br>プロピルチオウラシル（PTU）</td><td>バセドウ病。<span class="tr tag">無顆粒球症（重篤・急の発熱・咽頭痛で緊急受診）</span><br>妊婦：PTUが推奨（MMIは催奇形性）</td></tr>
+      <tr><td>甲状腺ホルモン薬</td><td>レボチロキシン（チラーヂンS）</td><td>甲状腺機能低下症（橋本病等）。空腹時服用。</td></tr>
+      <tr><td>副腎皮質ステロイド</td><td>プレドニゾロン・ヒドロコルチゾン</td><td>副作用：満月様顔貌・高血糖・易感染・骨粗鬆症・中心性肥満<br>急な中止禁忌（副腎クリーゼ）</td></tr>
+      <tr><td>骨粗鬆症治療薬</td><td>ビスホスホネート（アレンドロン酸）<br>デノスマブ（プラリア）<br>テリパラチド（フォルテオ）</td><td>ビスホスホネート：<strong>服用後30分は上体を起こす（食道炎予防）</strong><br>顎骨壊死に注意（歯科処置前に休薬検討）</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 呼吸器 -->
+<div class="subsec" id="s4">
+  <div class="chd" style="margin-top:0;"><h2>🫁 呼吸器系の薬</h2><span class="bdg bf">⭐ 重点（新規追加）</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💨</span>気管支喘息治療薬</div>
+    <div class="nb y">💡 喘息の基本：「長期管理薬（コントローラー）」＋「発作時の短時間β₂作動薬（リリーバー）」</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>投与方法</th><th>特徴・副作用</th></tr>
+      <tr><td><span class="tg tag">吸入ステロイド（ICS）</span></td><td>フルチカゾン（フルタイド）<br>ブデソニド（パルミコート）</td><td>吸入（定期使用）</td><td>長期管理薬の第一選択。<span class="tr tag">口腔カンジダ症→吸入後うがい必須</span></td></tr>
+      <tr><td><span class="tb tag">短時間β₂作動薬（SABA）</span></td><td>サルブタモール（メプチン）<br>プロカテロール</td><td>吸入（発作時）</td><td>発作時即時使用。動悸・振戦。β遮断薬で効果↓</td></tr>
+      <tr><td>長時間β₂作動薬（LABA）</td><td>ホルモテロール・サルメテロール</td><td>吸入（定期）</td><td>単独使用禁忌（ICSと併用）</td></tr>
+      <tr><td>テオフィリン</td><td>テオドール・ユニフィル</td><td>内服</td><td>気管支拡張。<span class="tr tag">TDM必須（有効域5〜15µg/mL）</span><br>中毒：頭痛・嘔吐・不整脈・痙攣</td></tr>
+      <tr><td>ロイコトリエン受容体拮抗薬</td><td>モンテルカスト（キプレス）</td><td>内服</td><td>アスピリン喘息にも有効。副作用少ない</td></tr>
+      <tr><td>抗コリン薬（LAMA）</td><td>チオトロピウム（スピリーバ）</td><td>吸入（主にCOPD）</td><td>COPD長期管理。口渇・排尿困難</td></tr>
+    </table>
+    <div class="nb w">⚠️ 吸入ステロイド使用後は必ずうがい（口腔カンジダ症・声枯れ予防）</div>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">🫁</span>COPD・去痰薬・鎮咳薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴</th></tr>
+      <tr><td>COPD治療</td><td>チオトロピウム（LAMA）<br>インダカテロール（LABA）</td><td>禁煙が最重要。β遮断薬は禁忌。在宅酸素療法（HOT）</td></tr>
+      <tr><td>去痰薬（粘液溶解）</td><td>カルボシステイン（ムコダイン）<br>アンブロキソール（ムコソルバン）</td><td>痰を薄くして排出しやすくする。水分補給も重要</td></tr>
+      <tr><td>鎮咳薬</td><td>コデインリン酸塩（麻薬性）<br>デキストロメトルファン（非麻薬性）</td><td>コデインは依存性あり。喘息患者には慎重投与</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 消化器 -->
+<div class="subsec" id="s5">
+  <div class="chd" style="margin-top:0;"><h2>🫀 消化器系の薬</h2><span class="bdg bf">⭐ 重点（新規追加）</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>胃酸分泌抑制薬・消化性潰瘍治療薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>機序・特徴</th></tr>
+      <tr><td><span class="tg tag">PPI（プロトンポンプ阻害薬）</span></td><td>オメプラゾール・ランソプラゾール・エソメプラゾール</td><td>最強の胃酸分泌抑制。H.pylori除菌に使用。<span class="tr tag">長期使用で低Mg・骨折リスク</span></td></tr>
+      <tr><td>H₂受容体拮抗薬（H₂ブロッカー）</td><td>ファモチジン・シメチジン・ラニチジン</td><td>胃酸分泌↓。シメチジンはCYP阻害→多剤相互作用</td></tr>
+      <tr><td>制酸薬</td><td>水酸化Al・炭酸水素Na</td><td>症状緩和目的。テトラサイクリン・ニューキノロンの吸収↓</td></tr>
+      <tr><td>H.pylori除菌</td><td>PPI＋クラリスロマイシン＋アモキシシリン（1次除菌）</td><td>胃・十二指腸潰瘍の再発予防。服薬アドヒアランスが重要</td></tr>
+      <tr><td>粘膜保護薬</td><td>スクラルファート・レバミピド（ムコスタ）</td><td>胃粘膜を物理的に保護</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>便秘薬・下痢止め・制吐薬・肝臓薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>機序・注意</th></tr>
+      <tr><td>刺激性下剤</td><td>センナ・ビサコジル（テレミンソフト坐薬）<br>酸化マグネシウム（塩類下剤）</td><td>腸管刺激で蠕動促進。酸化Mg：腎機能低下で高Mg血症リスク</td></tr>
+      <tr><td>浸透圧性下剤</td><td>ラクツロース・ポリエチレングリコール（PEG）</td><td>腸管内に水分を保持して軟化。肝性脳症にもラクツロース使用</td></tr>
+      <tr><td>止痢薬</td><td>ロペラミド（ロペミン）</td><td>腸管運動↓・水分吸収↑。感染性腸炎では原則禁忌</td></tr>
+      <tr><td>制吐薬</td><td>メトクロプラミド（プリンペラン）<br>オンダンセトロン（ゾフラン）</td><td>メトクロプラミド：EPS（錐体外路症状）が副作用<br>オンダンセトロン：5-HT₃拮抗薬。抗癌薬誘発嘔吐に有効</td></tr>
+      <tr><td>肝保護薬</td><td>ウルソデオキシコール酸（UDCA）</td><td>胆汁酸組成改善。原発性胆汁性胆管炎・胆石症</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 抗菌薬 -->
+<div class="subsec" id="s6">
+  <div class="chd" style="margin-top:0;"><h2>🦠 抗菌薬・抗ウイルス薬・抗真菌薬</h2><span class="bdg bp">標準</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>主要抗菌薬の分類</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴・副作用・禁忌</th></tr>
+      <tr><td>ペニシリン系</td><td>アンピシリン・アモキシシリン</td><td>アナフィラキシーショック。セフェム系と交差アレルギー</td></tr>
+      <tr><td>セフェム系</td><td>セファゾリン・セフトリアキソン</td><td>術前予防に多用。アレルギー注意</td></tr>
+      <tr><td>カルバペネム系</td><td>メロペネム・イミペネム</td><td>広域スペクトラム。多剤耐性菌（MRSAには無効）</td></tr>
+      <tr><td>グリコペプチド系</td><td>バンコマイシン・テイコプラニン</td><td><span class="tg tag">MRSA</span>・VRSA治療。<span class="tr tag">腎毒性・耳毒性</span>。TDM必須。Red man症候群（急速静注）</td></tr>
+      <tr><td>アミノグリコシド系</td><td>ゲンタマイシン・アミカシン</td><td><span class="tr tag">腎毒性・耳毒性</span>。TDM必須。妊婦禁忌</td></tr>
+      <tr><td>マクロライド系</td><td>エリスロマイシン・クラリスロマイシン・アジスロマイシン</td><td>非定型肺炎・マイコプラズマ。消化器症状・QT延長</td></tr>
+      <tr><td>テトラサイクリン系</td><td>ミノサイクリン・ドキシサイクリン</td><td>光線過敏。<span class="tr tag">小児禁忌</span>（歯・骨）。牛乳で吸収↓</td></tr>
+      <tr><td>ニューキノロン系</td><td>レボフロキサシン・シプロフロキサシン</td><td><span class="tr tag">小児・妊婦禁忌</span>（関節障害）。光線過敏・QT延長。Mg/Al制酸薬で吸収↓</td></tr>
+      <tr><td>抗結核薬</td><td>イソニアジド・リファンピシン・エタンブトール・ピラジナミド</td><td>イソニアジド：末梢神経障害（B₆で予防）。リファンピシン：尿・汗・涙が<span class="tr tag">橙赤色</span>に変色</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">🦠</span>抗ウイルス薬・抗真菌薬・抗HIV薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴</th></tr>
+      <tr><td>抗ヘルペス薬</td><td>アシクロビル・バラシクロビル</td><td>HSV・VZV（水痘・帯状疱疹）に有効。腎毒性に注意（水分補給重要）</td></tr>
+      <tr><td>抗インフルエンザ薬</td><td>オセルタミビル（タミフル）<br>ザナミビル（リレンザ）</td><td>発症48時間以内に使用。タミフル：小児での異常行動報告</td></tr>
+      <tr><td>抗HIV薬</td><td>テノホビル・エムトリシタビン（核酸系）<br>エファビレンツ（NNRTI）</td><td>多剤併用療法（HAART/ART）。生涯服薬が原則。薬物相互作用多い</td></tr>
+      <tr><td>抗真菌薬</td><td>フルコナゾール・ミカファンギン<br>アムホテリシンB</td><td>アムホテリシンB：腎毒性・低K血症。フルコナゾール：CYP阻害</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 抗癌薬 -->
+<div class="subsec" id="s7">
+  <div class="chd" style="margin-top:0;"><h2>🔬 抗癌薬・化学療法薬</h2><span class="bdg bf">⭐ 重点（新規追加）</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>抗癌薬の共通副作用と看護（最重要）</div>
+    <div class="nb w">
+      ⚠️ <strong>骨髄抑制</strong>：白血球↓（感染）・赤血球↓（貧血）・血小板↓（出血）→ 感染予防・転倒予防が重要<br>
+      ⚠️ <strong>ナジール</strong>：投与後7〜14日頃が最も骨髄抑制が強い時期<br>
+      ⚠️ <strong>催吐性</strong>：制吐薬（オンダンセトロン等）を予防投与
+    </div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴的副作用</th><th>看護ポイント</th></tr>
+      <tr><td>アルキル化薬</td><td>シクロホスファミド（エンドキサン）</td><td><span class="tr tag">出血性膀胱炎</span>・骨髄抑制・脱毛</td><td>大量水分補給（メスナ予防投与）。尿の観察</td></tr>
+      <tr><td>白金製剤</td><td>シスプラチン（ランダ）</td><td><span class="tr tag">腎毒性（特徴的）</span>・聴器毒性・強い嘔吐。骨髄抑制は少ない</td><td>十分な補液（利尿確保）。尿量観察。TDM</td></tr>
+      <tr><td>代謝拮抗薬</td><td>5-FU・メトトレキサート・ゲムシタビン</td><td>骨髄抑制・口腔粘膜炎。メトトレキサート：腎毒性・肺毒性</td><td>口腔ケア（粘膜炎予防）。ロイコボリン救済療法</td></tr>
+      <tr><td>タキサン系</td><td>パクリタキセル（タキソール）<br>ドセタキセル（タキソテール）</td><td><span class="tr tag">末梢神経障害</span>・過敏反応・脱毛・骨髄抑制</td><td>前投薬（ステロイド・抗ヒスタミン）必須</td></tr>
+      <tr><td>アントラサイクリン系</td><td>ドキソルビシン（アドリアマイシン）</td><td><span class="tr tag">心毒性（心筋症）</span>・骨髄抑制・脱毛・<span class="ty tag">赤い尿</span></td><td>心エコーでの心機能モニタリング</td></tr>
+      <tr><td>分子標的薬</td><td>トラスツズマブ（ハーセプチン）<br>イマチニブ（グリベック）<br>ゲフィチニブ（イレッサ）</td><td>ゲフィチニブ：<span class="tr tag">間質性肺炎（重篤）</span><br>トラスツズマブ：心毒性</td><td>発熱・乾性咳嗽→間質性肺炎を疑い即報告</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">⚠️</span>抗癌薬の安全管理（看護師として必須）</div>
+    <div class="nb">
+      💊 <strong>曝露対策（職業性曝露防止）</strong>：調製はクリーンベンチ・安全キャビネットで。手袋・ガウン・マスク着用。<br>
+      💊 <strong>血管外漏出</strong>：刺激性抗癌薬が漏れると組織壊死。投与部位を頻回に観察。漏出時は投与中止→医師報告。<br>
+      💊 <strong>感染予防</strong>：骨髄抑制期はWBC<1000/μLで易感染。手洗い・マスク・生花禁止・生食注意。
+    </div>
+  </div>
+</div>
+
+<!-- 骨・痛風・免疫 -->
+<div class="subsec" id="s8">
+  <div class="chd" style="margin-top:0;"><h2>🦴 骨・痛風・アレルギー・免疫抑制薬</h2><span class="bdg bf">⭐ 重点（新規追加）</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">💊</span>鎮痛薬の分類（WHO鎮痛ラダー）</div>
+    <div class="nb">WHO3段階除痛ラダー：軽度→NSAIDs。中等度→弱オピオイド（コデイン）。強い痛み→強オピオイド（モルヒネ等）</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>副作用・注意</th></tr>
+      <tr><td>NSAIDs</td><td>インドメタシン・ロキソプロフェン・アスピリン・ジクロフェナク</td><td><span class="tr tag">消化性潰瘍</span>・腎障害・出血傾向。アスピリン喘息。妊婦後期禁忌（胎児動脈管早期閉鎖）</td></tr>
+      <tr><td>アセトアミノフェン</td><td>カロナール・アセリオ（静注）</td><td>解熱鎮痛。<span class="tr tag">大量投与で肝毒性</span>。NSAIDsの副作用が少ない。高齢者・小児に第一選択</td></tr>
+      <tr><td>強オピオイド</td><td>モルヒネ・オキシコドン・フェンタニル・ヒドロモルフォン</td><td>便秘（必発→緩下薬を必ず予防投与）・悪心・眠気・<span class="tr tag">呼吸抑制</span>。拮抗薬：ナロキソン</td></tr>
+      <tr><td>弱オピオイド</td><td>コデイン・トラマドール</td><td>依存性あり。咳嗽にも使用（コデイン）</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">🦴</span>痛風・アレルギー・免疫抑制薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>代表薬</th><th>特徴・副作用</th></tr>
+      <tr><td>痛風発作治療</td><td>コルヒチン・インドメタシン</td><td>コルヒチン：下痢・嘔吐。発作予防にも少量使用</td></tr>
+      <tr><td>尿酸降下薬</td><td>アロプリノール・フェブキソスタット（尿酸産生↓）<br>プロベネシド・ベンズブロマロン（尿酸排泄↑）</td><td>アロプリノール：SJS・骨髄抑制。服薬中は水分を十分摂取（尿路結石予防）</td></tr>
+      <tr><td>抗ヒスタミン薬</td><td>ジフェンヒドラミン（ポララミン）（第1世代）<br>セチリジン・ロラタジン（第2世代）</td><td>第1世代：眠気・口渇・抗コリン作用（高齢者注意）<br>第2世代：眠気少ない</td></tr>
+      <tr><td>免疫抑制薬</td><td>シクロスポリン・タクロリムス（FK506）<br>アザチオプリン・ミコフェノール酸</td><td><span class="tr tag">易感染（最重要副作用）</span>・腎毒性・高血圧<br>シクロスポリン・タクロリムス：TDM必須</td></tr>
+      <tr><td>リウマチ治療薬（DMARDs）</td><td>メトトレキサート（MTX）<br>サラゾスルファピリジン</td><td>MTX：骨髄抑制・肺毒性・口内炎。葉酸補充で副作用軽減</td></tr>
+      <tr><td>生物学的製剤</td><td>インフリキシマブ（レミケード）<br>エタネルセプト（エンブレル）</td><td>TNF-α阻害薬。<span class="tr tag">結核の再活性化リスク→投与前にQFT検査必須</span>。易感染</td></tr>
+    </table>
+  </div>
+</div>
+
+<!-- 自律神経・ステロイド -->
+<div class="subsec" id="s9">
+  <div class="chd" style="margin-top:0;"><h2>💉 自律神経薬・ステロイド・輸液</h2><span class="bdg bp">標準</span></div>
+  <div class="card">
+    <div class="ct"><span class="ico">🧬</span>自律神経作用薬</div>
+    <table class="dt">
+      <tr><th>分類</th><th>主な作用</th><th>適応</th><th>禁忌</th></tr>
+      <tr><td>β₂刺激薬（アドレナリン作動）</td><td>気管支拡張・子宮弛緩</td><td>気管支喘息・切迫早産</td><td>—</td></tr>
+      <tr><td>β遮断薬（抗アドレナリン）</td><td>心拍出量↓・気管支収縮</td><td>高血圧・狭心症・頻脈</td><td><strong>気管支喘息・徐脈</strong></td></tr>
+      <tr><td>コリン作動薬（副交感神経↑）</td><td>眼圧↓・腸管運動↑・気管支収縮</td><td>緑内障</td><td>気管支喘息・消化性潰瘍</td></tr>
+      <tr><td>抗コリン薬（アトロピン）</td><td>眼圧↑・気管支拡張・腸管運動↓・心拍数↑</td><td>気管支喘息・有機リン中毒・麻酔前投薬</td><td><strong>緑内障・前立腺肥大症</strong></td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <div class="ct"><span class="ico">💧</span>輸液製剤の種類と適応（国試頻出）</div>
+    <table class="dt">
+      <tr><th>輸液の種類</th><th>代表製剤</th><th>適応・特徴</th></tr>
+      <tr><td>等張晶質液</td><td>生理食塩液（0.9%NaCl）<br>乳酸リンゲル液（ラクテック）</td><td>細胞外液補充。循環血液量↓・ショック。<span class="tr tag">大量投与で高Cl性アシドーシス（生食）</span></td></tr>
+      <tr><td>低張液（維持液）</td><td>5%ブドウ糖液・1号液〜4号液</td><td>維持目的。1号液→術前・脱水。3号液→維持輸液。4号液→術後</td></tr>
+      <tr><td>高張液</td><td>マンニトール（D-マンニトール）</td><td>脳浮腫・頭蓋内圧亢進。強力な浸透圧利尿</td></tr>
+      <tr><td>膠質液</td><td>アルブミン製剤・デキストラン</td><td>低アルブミン血症・出血性ショック</td></tr>
+      <tr><td>KCl（カリウム）投与</td><td>塩化カリウム注射液</td><td><span class="tr tag">必ず希釈して緩徐に投与。原液を急速静注すると心停止！</span></td></tr>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- ══════════ TABLE ══════════ -->
+<section id="table" class="section">
+<div class="chd" style="margin-top:0;"><h2>📊 カテゴリ別まとめ表</h2></div>
+<div class="card">
+  <div class="ct"><span class="ico">⭐</span>国試頻出ポイント Top15</div>
+  <table class="dt">
+    <tr><th>#</th><th>ポイント</th><th>覚え方</th></tr>
+    <tr><td>1</td><td>ACE阻害薬→空咳（10〜20%）</td><td>「ACEは咳」。ARBに変更</td></tr>
+    <tr><td>2</td><td>ジゴキシン中毒→黄色視・悪心・不整脈</td><td>低K血症で中毒リスク↑。TDM必須</td></tr>
+    <tr><td>3</td><td>ワルファリン→納豆禁止・PT-INR</td><td>緑黄色野菜は「量を一定に」</td></tr>
+    <tr><td>4</td><td>インスリン超速効型→食直前投与</td><td>ランタス（持効型）→就寝前</td></tr>
+    <tr><td>5</td><td>αGI服用中の低血糖→ブドウ糖で対処</td><td>砂糖（二糖類）は吸収されない</td></tr>
+    <tr><td>6</td><td>吸入ステロイド→吸入後うがい必須</td><td>口腔カンジダ症・声枯れ予防</td></tr>
+    <tr><td>7</td><td>メトトレキサート→葉酸補充・肺毒性</td><td>骨髄抑制・口内炎。週1〜2回服用</td></tr>
+    <tr><td>8</td><td>ビスホスホネート→服用後30分は起立</td><td>食道炎予防。顎骨壊死に注意</td></tr>
+    <tr><td>9</td><td>リファンピシン→尿・汗が橙赤色</td><td>患者への事前説明が重要</td></tr>
+    <tr><td>10</td><td>KCl（カリウム）原液静注→心停止</td><td>必ず希釈して緩徐に投与</td></tr>
+    <tr><td>11</td><td>抗コリン薬→緑内障・前立腺肥大に禁忌</td><td>眼圧↑・排尿困難悪化</td></tr>
+    <tr><td>12</td><td>悪性症候群→高体温・筋強剛・CPK↑</td><td>抗精神病薬の重大副作用</td></tr>
+    <tr><td>13</td><td>チアマゾール→無顆粒球症（発熱・咽頭痛）</td><td>白血球数の定期モニタリング</td></tr>
+    <tr><td>14</td><td>シスプラチン→腎毒性（補液が重要）</td><td>尿量確保・TDM</td></tr>
+    <tr><td>15</td><td>ニトログリセリン→舌下投与</td><td>内服では初回通過効果で失活</td></tr>
+  </table>
+</div>
+<div class="card">
+  <div class="ct"><span class="ico">🚫</span>妊婦禁忌薬まとめ</div>
+  <table class="dt">
+    <tr><th>薬剤名</th><th>リスク・理由</th></tr>
+    <tr><td>バルプロ酸・フェニトイン・カルバマゼピン</td><td>神経管閉鎖障害・胎児奇形</td></tr>
+    <tr><td>ワルファリン</td><td>胎盤通過→胎児出血・ワルファリン症候群</td></tr>
+    <tr><td>ACE阻害薬・ARB</td><td>胎児腎障害・羊水過少</td></tr>
+    <tr><td>テトラサイクリン系・アミノグリコシド系</td><td>歯・骨の発育障害・聴器毒性</td></tr>
+    <tr><td>ニューキノロン系</td><td>関節・軟骨障害</td></tr>
+    <tr><td>NSAIDs（後期）</td><td>胎児動脈管早期閉鎖・羊水過少</td></tr>
+    <tr><td>チアマゾール（MMI）（早期）</td><td>催奇形性。妊婦にはPTU推奨（妊初期）</td></tr>
+    <tr><td>抗癌薬全般（多くが禁忌）</td><td>催奇形性・流産</td></tr>
+  </table>
+</div>
+<div class="card">
+  <div class="ct"><span class="ico">🔬</span>TDMが必要な薬まとめ</div>
+  <table class="dt">
+    <tr><th>薬剤名</th><th>目的・用途</th><th>中毒症状</th></tr>
+    <tr><td>ジゴキシン</td><td>強心・心房細動</td><td>黄色視・悪心・不整脈</td></tr>
+    <tr><td>炭酸リチウム</td><td>双極性障害</td><td>振戦・嘔吐・意識障害（0.6〜1.2 mEq/L）</td></tr>
+    <tr><td>バルプロ酸Na</td><td>てんかん・双極性障害</td><td>眠気・消化器症状・肝毒性</td></tr>
+    <tr><td>フェニトイン</td><td>てんかん</td><td>眼振・運動失調・歯肉増殖</td></tr>
+    <tr><td>テオフィリン</td><td>気管支喘息</td><td>頭痛・嘔吐・不整脈・痙攣（5〜15µg/mL）</td></tr>
+    <tr><td>バンコマイシン</td><td>MRSA感染症</td><td>腎毒性・耳毒性・Red man症候群</td></tr>
+    <tr><td>シクロスポリン・タクロリムス</td><td>免疫抑制（臓器移植）</td><td>腎毒性・高血圧・神経毒性</td></tr>
+    <tr><td>メトトレキサート</td><td>リウマチ・抗癌</td><td>骨髄抑制・肺毒性・口内炎</td></tr>
+  </table>
+</div>
+</section>
+
+<!-- ══════════ QUIZ ══════════ -->
+<section id="quiz" class="section">
+<div class="qc">
+  <div id="qmain">
+    <div style="display:flex;justify-content:space-between;margin-bottom:10px;">
+      <span id="qcat" style="font-size:10px;color:var(--txd);font-family:'DM Mono',monospace;"></span>
+      <span id="qnum" style="font-size:10px;color:var(--txd);font-family:'DM Mono',monospace;"></span>
+    </div>
+    <div class="pb"><div class="pf" id="qbar"></div></div>
+    <div class="qcard">
+      <div class="qt" id="qq"></div>
+      <div id="qch"></div>
+      <div class="eb" id="qex"></div>
+    </div>
+    <div style="margin-top:9px;">
+      <button class="btn bp2" id="qnext" onclick="nextQ()" style="display:none;">次の問題 →</button>
+    </div>
+  </div>
+  <div id="qscore" class="card sc" style="display:none;">
+    <div style="font-size:10px;color:var(--txd);font-family:'DM Mono',monospace;margin-bottom:7px;">RESULT</div>
+    <div class="sn" id="spct"></div>
+    <div class="sl" id="smsg"></div>
+    <div class="sg">
+      <div class="si"><div class="sni" id="sok" style="color:var(--ac3);"></div><div class="sli">正解</div></div>
+      <div class="si"><div class="sni" id="sng" style="color:var(--ac2);"></div><div class="sli">不正解</div></div>
+      <div class="si"><div class="sni" id="stot"></div><div class="sli">合計</div></div>
+    </div>
+    <button class="btn bp2" onclick="initQ()">もう一度挑戦</button>
+  </div>
+</div>
+</section>
+
+<!-- ══════════ FLASH ══════════ -->
+<section id="flash" class="section">
+<div class="fa">
+  <div style="margin-bottom:11px;color:var(--txd);font-size:11px;">クリックしてめくる</div>
+  <div class="fc" id="fcard" onclick="flipFC()">
+    <div class="fi2">
+      <div class="ff"><div class="fl-l">KEYWORD</div><div class="fm" id="ffront"></div><div class="fs2" id="ffsub"></div><div class="fh">↓ クリックして確認</div></div>
+      <div class="fb"><div class="fl-l">ANSWER</div><div class="fm" id="fback" style="font-size:11px;text-align:center;"></div></div>
+    </div>
+  </div>
+  <div class="fn">
+    <button class="btn bo" onclick="prevFC()">← 前へ</button>
+    <span class="fcn" id="fcnt"></span>
+    <button class="btn bo" onclick="nextFC()">次へ →</button>
+  </div>
+  <div style="margin-top:14px;text-align:center;">
+    <button class="btn bp2" onclick="shuffleFC()" style="font-size:11px;padding:6px 14px;">🔀 シャッフル</button>
+  </div>
+</div>
+</section>
+
+<!-- ══════════ COVER ══════════ -->
+<section id="cover" class="section">
+<div class="chd" style="margin-top:0;"><h2>📈 国試カバー率（推定）</h2></div>
+<div class="cov-bar">
+  <div class="cov-title">各分野のカバー率（このアプリの収録内容による推定）</div>
+  <div class="cov-row"><span class="cov-label">❤️ 循環器系</span><div class="cov-track"><div class="cov-fill" style="width:92%;background:var(--ac3);"></div></div><span class="cov-pct">92%</span></div>
+  <div class="cov-row"><span class="cov-label">🧠 精神神経系</span><div class="cov-track"><div class="cov-fill" style="width:88%;background:var(--ac3);"></div></div><span class="cov-pct">88%</span></div>
+  <div class="cov-row"><span class="cov-label">🍬 内分泌・代謝系</span><div class="cov-track"><div class="cov-fill" style="width:85%;background:var(--ac3);"></div></div><span class="cov-pct">85%</span></div>
+  <div class="cov-row"><span class="cov-label">🫁 呼吸器系</span><div class="cov-track"><div class="cov-fill" style="width:82%;background:var(--ac);"></div></div><span class="cov-pct">82%</span></div>
+  <div class="cov-row"><span class="cov-label">🫀 消化器系</span><div class="cov-track"><div class="cov-fill" style="width:78%;background:var(--ac);"></div></div><span class="cov-pct">78%</span></div>
+  <div class="cov-row"><span class="cov-label">🦠 抗菌薬・抗感染症</span><div class="cov-track"><div class="cov-fill" style="width:85%;background:var(--ac3);"></div></div><span class="cov-pct">85%</span></div>
+  <div class="cov-row"><span class="cov-label">🔬 抗癌薬</span><div class="cov-track"><div class="cov-fill" style="width:80%;background:var(--ac);"></div></div><span class="cov-pct">80%</span></div>
+  <div class="cov-row"><span class="cov-label">🦴 骨・痛風・免疫</span><div class="cov-track"><div class="cov-fill" style="width:78%;background:var(--ac);"></div></div><span class="cov-pct">78%</span></div>
+  <div class="cov-row"><span class="cov-label">💉 自律神経・輸液</span><div class="cov-track"><div class="cov-fill" style="width:80%;background:var(--ac);"></div></div><span class="cov-pct">80%</span></div>
+  <div class="cov-row" style="margin-top:12px;border-top:1px solid var(--bd);padding-top:12px;">
+    <span class="cov-label" style="color:var(--ac5);font-weight:700;">🎯 総合カバー率（推定）</span>
+    <div class="cov-track" style="height:10px;"><div class="cov-fill" style="width:83%;background:linear-gradient(90deg,var(--ac),var(--ac4));"></div></div>
+    <span class="cov-pct" style="color:var(--ac5);font-weight:700;">83%</span>
+  </div>
+</div>
+<div class="card">
+  <div class="ct"><span class="ico">⚠️</span>まだカバーが弱い領域（今後の学習で補強を）</div>
+  <table class="dt">
+    <tr><th>分野</th><th>具体的な内容</th><th>対策</th></tr>
+    <tr><td>泌尿器・生殖器系</td><td>排尿障害治療薬・子宮収縮薬（オキシトシン）・子宮弛緩薬</td><td>産科・泌尿器科の参考書で補充</td></tr>
+    <tr><td>眼科・耳鼻科</td><td>点眼薬（抗緑内障薬詳細）・耳鼻科局所薬</td><td>該当科の実習で確認</td></tr>
+    <tr><td>皮膚科外用薬</td><td>ステロイド外用薬の強さの分類</td><td>ランク（strongest〜weak）を整理</td></tr>
+    <tr><td>麻酔薬</td><td>全身麻酔薬・局所麻酔薬・筋弛緩薬</td><td>周手術期看護で学習</td></tr>
+    <tr><td>漢方薬</td><td>葛根湯・芍薬甘草湯・防風通聖散等</td><td>主要15処方と適応をまとめる</td></tr>
+  </table>
+</div>
+<div class="card">
+  <div class="ct"><span class="ico">📚</span>国試対策の優先順位</div>
+  <div class="nb g">✅ <strong>このアプリで十分カバーできる分野（優先度：高）</strong><br>循環器・精神神経・内分泌（インスリン）・感染症・抗癌薬の共通副作用</div>
+  <div class="nb y">⚡ <strong>過去問演習で補強すべき分野（優先度：中）</strong><br>消化器・呼吸器・骨粗鬆症・免疫抑制薬・輸液管理</div>
+  <div class="nb w">📖 <strong>参考書で深める分野（優先度：低）</strong><br>眼科・皮膚科外用薬・漢方・麻酔薬の詳細</div>
+</div>
+</section>
+</main>
+
+<script>
+function showTab(id,el){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+  if(id==='quiz') initQ();
+  if(id==='flash') renderFC();
+}
+function showSub(id,el){
+  document.querySelectorAll('.subsec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.stab').forEach(t=>t.classList.remove('sa'));
+  document.getElementById(id).classList.add('on');
+  el.classList.add('sa');
+}
+
+// ── QUESTIONS (30問) ──
+const Qs=[
+  {cat:'📌 薬理総論',q:'血中濃度の上昇が最も速い与薬方法はどれか。',c:['経口投与','筋肉内注射','皮下注射','静脈内注射'],a:3,e:'静脈内注射は血管内への直接投与で最速。経口投与は初回通過効果（肝臓）があり最も遅い。舌下投与（ニトログリセリン等）は初回通過効果を回避。'},
+  {cat:'📌 薬理総論',q:'ワルファリン服用患者に「完全禁止」と指導する食品はどれか。',c:['グレープフルーツ','牛乳','納豆','チーズ'],a:2,e:'納豆はビタミンKを極めて多く含みワルファリンの抗凝固効果を著しく減弱させる。緑黄色野菜は「量を一定に」が指導ポイント（急増減がNG）。'},
+  {cat:'📌 薬理総論',q:'ヘパリンの拮抗薬（解毒薬）はどれか。',c:['ビタミンK','フルマゼニル','プロタミン硫酸塩','ナロキソン'],a:2,e:'ヘパリンの拮抗薬はプロタミン硫酸塩。ワルファリン→ビタミンK。BZD系→フルマゼニル。オピオイド→ナロキソン。'},
+  {cat:'❤️ 循環器',q:'ACE阻害薬（エナラプリル等）の特徴的な副作用はどれか。',c:['下肢浮腫（10〜15%）','空咳（10〜20%）','歯肉肥厚','高血糖'],a:1,e:'ACE阻害薬の特徴的副作用はブラジキニン蓄積による空咳（乾性咳嗽）10〜20%。この場合はARBへの変更を検討する。「ACEは咳」で覚える。'},
+  {cat:'❤️ 循環器',q:'フロセミド（ループ利尿薬）使用時に注意すべき電解質異常はどれか。',c:['高カリウム血症','低カリウム血症','高カルシウム血症','高マグネシウム血症'],a:1,e:'フロセミドはNa・水・Kを排泄するため低K血症が代表的副作用。K<3.0mEq/Lで不整脈リスク。ジゴキシン使用患者では中毒リスクが上昇する。'},
+  {cat:'❤️ 循環器',q:'ジゴキシン中毒の特徴的な症状はどれか。',c:['空咳','黄色視（黄色・緑色に見える）','下肢浮腫','高K血症'],a:1,e:'ジゴキシン中毒では視覚異常として黄色視（黄色・緑色に見える）が特徴的。悪心・嘔吐・不整脈も出現。低K血症で中毒リスク↑。TDM必須（治療域1.0〜2.0 ng/mL）。'},
+  {cat:'❤️ 循環器',q:'ニトログリセリンの正しい投与方法はどれか。',c:['経口投与','舌下投与','筋肉内注射','皮下注射'],a:1,e:'ニトログリセリンは狭心症発作時に舌下投与。経口投与では初回通過効果で大部分が失活して効果がなくなる。'},
+  {cat:'❤️ 循環器',q:'ワルファリンの効果判定に用いる検査はどれか。',c:['APTT','PT-INR','血小板数','フィブリノーゲン'],a:1,e:'ワルファリンはPT-INRで効果判定（目標2.0〜3.0）。ヘパリンはAPTTで効果判定。混同しない！'},
+  {cat:'🍬 内分泌・代謝',q:'インスリン超速効型製剤の投与タイミングとして正しいのはどれか。',c:['食後30分','食前30分','食直前（0〜15分前）','就寝前'],a:2,e:'超速効型（ノボラピッド・ヒューマログ等）は食直前（0〜15分前）に投与。速効型（R）は食前30分。持効型（ランタス等）は就寝前1回投与が基本。'},
+  {cat:'🍬 内分泌・代謝',q:'αグルコシダーゼ阻害薬（ボグリボース等）服用中に低血糖が起きた場合の対処として正しいのはどれか。',c:['チョコレートを食べる','砂糖水を飲む','ブドウ糖を摂取する','牛乳を飲む'],a:2,e:'αGI（ボグリボース・アカルボース）は炭水化物の消化吸収を遅延させるため、二糖類（砂糖・砂糖水）は吸収されない。低血糖時はブドウ糖（単糖類）を摂取する。'},
+  {cat:'🍬 内分泌・代謝',q:'チアマゾール（MMI）服用中に起こる重大な副作用で、緊急受診が必要なのはどれか。',c:['口渇・多飲','急な発熱・咽頭痛','光線過敏','黄色視'],a:1,e:'チアマゾールは無顆粒球症（白血球減少）が重大な副作用。急な発熱・咽頭痛が早期症状→すぐに受診し血液検査を受ける。白血球数の定期モニタリングが必要。'},
+  {cat:'🍬 内分泌・代謝',q:'ビスホスホネート製剤の服薬指導として正しいのはどれか。',c:['食後すぐに服用し横になってよい','服用後30分は上体を起こしたままにする','牛乳と一緒に服用する','就寝前に服用する'],a:1,e:'ビスホスホネートは食道炎予防のため、服用後少なくとも30分は横にならず上体を起こしたままにする。空腹時（起床後すぐ）に水で服用し、その後30分は飲食しない。'},
+  {cat:'🫁 呼吸器',q:'吸入ステロイド薬（フルチカゾン等）使用後に行うべきケアはどれか。',c:['温かい飲み物を飲む','うがいをする','安静にして横になる','食事をとる'],a:1,e:'吸入ステロイド使用後は必ずうがいをする。口腔・咽頭に残った薬剤が原因で口腔カンジダ症や声枯れが起こるのを予防するため。'},
+  {cat:'🫁 呼吸器',q:'テオフィリンに関して正しいのはどれか。',c:['TDMは不要である','血中濃度5〜15µg/mLが有効域である','低血糖が主な副作用である','小児禁忌である'],a:1,e:'テオフィリンは気管支喘息・COPDに使用される気管支拡張薬。有効域が狭いためTDMが必須（5〜15µg/mL）。中毒症状：頭痛・嘔吐・不整脈・痙攣。'},
+  {cat:'🫀 消化器',q:'プロトンポンプ阻害薬（PPI）の代表薬はどれか。',c:['ラニチジン','ファモチジン','オメプラゾール','スクラルファート'],a:2,e:'PPI（プロトンポンプ阻害薬）の代表はオメプラゾール・ランソプラゾール・エソメプラゾール。最強の胃酸分泌抑制作用。H.pylori除菌療法にも使用される。ラニチジン・ファモチジンはH₂ブロッカー。'},
+  {cat:'🫀 消化器',q:'メトクロプラミド（プリンペラン）の注意すべき副作用はどれか。',c:['低血糖','耳毒性','錐体外路症状（EPS）','口腔カンジダ症'],a:2,e:'メトクロプラミドはドパミン拮抗薬。制吐・胃腸運動促進薬として使用されるが、錐体外路症状（パーキンソン症状・アカシジア等）が副作用として起こり得る。'},
+  {cat:'🦠 抗菌薬',q:'MRSA（メチシリン耐性黄色ブドウ球菌）に有効な抗菌薬はどれか。',c:['アンピシリン','ペニシリン','バンコマイシン','セファゾリン'],a:2,e:'バンコマイシンはMRSAに有効な数少ない薬剤。腎毒性・耳毒性があるためTDM必須。急速静注でRed man症候群（顔・上半身の紅潮・掻痒）が起こることがある。'},
+  {cat:'🦠 抗菌薬',q:'リファンピシン（抗結核薬）服用中に患者に説明すべき事項はどれか。',c:['空腹時に服用すること','尿や汗が橙赤色に変色することがある','グレープフルーツを避けること','服用後30分は横にならないこと'],a:1,e:'リファンピシンは尿・汗・涙・唾液などが橙赤色（赤みがかったオレンジ色）に変色する。これは正常な副作用であり、事前に患者に説明しておくことが重要。'},
+  {cat:'🦠 抗菌薬',q:'ニューキノロン系抗菌薬が禁忌となるのはどれか。',c:['高齢者','妊婦・小児','腎機能低下者','喘息患者'],a:1,e:'ニューキノロン系（レボフロキサシン・シプロフロキサシン等）は小児・妊婦に禁忌。関節・軟骨への障害が起こる可能性がある。光線過敏・QT延長にも注意。'},
+  {cat:'🔬 抗癌薬',q:'シスプラチン（白金製剤）に特徴的な副作用はどれか。',c:['出血性膀胱炎','末梢神経障害','腎毒性','心毒性（心筋症）'],a:2,e:'シスプラチンは腎毒性（腎障害・尿細管障害）が特徴的副作用。骨髄抑制は比較的少ない。十分な補液（利尿確保）が必須。聴器毒性（高音域難聴）にも注意。'},
+  {cat:'🔬 抗癌薬',q:'ドキソルビシン（アントラサイクリン系抗癌薬）の特徴的な副作用はどれか。',c:['腎毒性','心毒性（心筋症）・赤い尿','末梢神経障害','出血性膀胱炎'],a:1,e:'ドキソルビシンは心毒性（心筋症・心不全）が特徴的。尿が赤くなる（患者への事前説明が重要）。脱毛・骨髄抑制も主な副作用。心エコーでの定期モニタリングが必要。'},
+  {cat:'🔬 抗癌薬',q:'パクリタキセル（タキサン系）使用前に行うべき前投薬の目的はどれか。',c:['感染予防のため','過敏反応（アレルギー反応）予防のため','悪心予防のため','腎保護のため'],a:1,e:'パクリタキセルは溶媒（ポリソルベート80）のため過敏反応が起こりやすい。前投薬（ステロイド・H₁ブロッカー・H₂ブロッカー）が必須。'},
+  {cat:'🦴 骨・痛風・免疫',q:'NSAIDs（非ステロイド性抗炎症薬）の重大な副作用はどれか。',c:['無顆粒球症','消化性潰瘍','高血糖','口腔カンジダ症'],a:1,e:'NSAIDsの主な副作用は消化性潰瘍（COX-1阻害→粘膜保護のプロスタグランジン↓）。腎障害・出血傾向・アスピリン喘息も重要。妊婦後期は禁忌（動脈管早期閉鎖）。'},
+  {cat:'🦴 骨・痛風・免疫',q:'生物学的製剤（インフリキシマブ等）投与前に行うべき検査はどれか。',c:['肝機能検査','眼底検査','QFT（結核菌特異的IGRA検査）','聴力検査'],a:2,e:'TNF-α阻害薬（インフリキシマブ・エタネルセプト等）は結核の再活性化リスクがある。投与前にQFT（QuantiFERON）検査で潜在性結核感染を確認することが必須。'},
+  {cat:'🦴 骨・痛風・免疫',q:'モルヒネ（強オピオイド）使用患者に必ず予防投与すべき薬はどれか。',c:['制吐薬','抗菌薬','緩下薬（便秘予防）','抗ヒスタミン薬'],a:2,e:'オピオイド使用患者では便秘が必発（腸管蠕動↓）。耐性が生じないため、使用開始から緩下薬（センナ・酸化Mg等）を必ず予防投与する。悪心・眠気は徐々に改善するが便秘は改善しない。'},
+  {cat:'💉 自律神経・輸液',q:'抗コリン薬（アトロピン）が禁忌となる疾患はどれか。',c:['気管支喘息','消化性潰瘍','緑内障・前立腺肥大症','有機リン中毒'],a:2,e:'抗コリン薬は眼圧↑（緑内障禁忌）・排尿困難悪化（前立腺肥大禁忌）。気管支喘息・消化性潰瘍・有機リン中毒には適応（有機リン中毒の解毒薬として使用）。'},
+  {cat:'💉 自律神経・輸液',q:'カリウム（KCl）注射液を投与する際に最も注意すべき事項はどれか。',c:['グレープフルーツを避ける','原液を急速静注してはならない（心停止リスク）','食後に投与する','就寝前に投与する'],a:1,e:'KCl（塩化カリウム）の原液を急速静注すると心停止を起こす危険がある。必ず生食・ブドウ糖液などで希釈し、緩徐に投与する。電解質補正は必ず医師の指示に従う。'},
+  {cat:'🧠 精神神経系',q:'悪性症候群の症状として正しいのはどれか。',c:['低体温・筋弛緩・過眠','高体温・筋強剛・意識障害・CPK上昇','発疹・浮腫・呼吸困難','黄色視・悪心・不整脈'],a:1,e:'悪性症候群は抗精神病薬の重大副作用。高体温・筋強剛・意識障害・CPK上昇が4主徴。発見したら即時薬を中止し支持療法（冷却・ダントロレン等）を行う。'},
+  {cat:'🧠 精神神経系',q:'炭酸リチウムの中毒症状として正しいのはどれか。',c:['空咳・高K血症','振戦・嘔吐・意識障害','高血糖・体重増加','歯肉増殖・小脳症状'],a:1,e:'炭酸リチウムは有効域が狭い（0.6〜1.2 mEq/L）。中毒症状：振戦・嘔吐・下痢・意識障害・構音障害・運動失調。TDM必須。NSAIDsで中毒リスク↑。'},
+  {cat:'🧠 精神神経系',q:'抗うつ薬の効果が現れるまでの期間として正しいのはどれか。',c:['数時間〜1日','2〜4週間','3〜6か月','効果発現は個人差がありない場合もある'],a:1,e:'SSRI・SNRI・三環系などの抗うつ薬は効果発現まで2〜4週間かかる。服用初期に希死念慮が増すことがある（特に若年者では注意し、頻回なフォローが重要）。'},
+];
+
+let qList=[],qIdx=0,score=0;
+function initQ(){
+  qList=[...Qs].sort(()=>Math.random()-0.5);
+  qIdx=0;score=0;
+  document.getElementById('qmain').style.display='block';
+  document.getElementById('qscore').style.display='none';
+  renderQ();
+}
+function renderQ(){
+  const q=qList[qIdx];
+  document.getElementById('qnum').textContent=`${qIdx+1} / ${qList.length}`;
+  document.getElementById('qcat').textContent=q.cat;
+  document.getElementById('qbar').style.width=`${(qIdx/qList.length)*100}%`;
+  document.getElementById('qq').textContent=q.q;
+  document.getElementById('qex').className='eb';
+  document.getElementById('qex').innerHTML='';
+  document.getElementById('qnext').style.display='none';
+  const ch=document.getElementById('qch');
+  ch.innerHTML='';
+  q.c.forEach((c,i)=>{
+    const b=document.createElement('button');
+    b.className='cb';
+    b.textContent=['①','②','③','④'][i]+' '+c;
+    b.onclick=()=>pick(i,b);
+    ch.appendChild(b);
+  });
+}
+function pick(i,btn){
+  const q=qList[qIdx];
+  document.querySelectorAll('.cb').forEach(b=>b.disabled=true);
+  if(i===q.a){btn.classList.add('correct');score++;}
+  else{btn.classList.add('wrong');document.querySelectorAll('.cb')[q.a].classList.add('correct');}
+  const ex=document.getElementById('qex');
+  ex.innerHTML='<strong>解説：</strong>'+q.e;
+  ex.classList.add('show');
+  document.getElementById('qnext').style.display='inline-block';
+}
+function nextQ(){
+  qIdx++;
+  if(qIdx>=qList.length) showScore();
+  else renderQ();
+}
+function showScore(){
+  document.getElementById('qmain').style.display='none';
+  document.getElementById('qscore').style.display='block';
+  const pct=Math.round(score/qList.length*100);
+  document.getElementById('spct').textContent=pct+'%';
+  document.getElementById('smsg').textContent=pct>=90?'🎉 優秀！合格圏内です':pct>=70?'👍 あと少し！苦手を復習しよう':'📚 テキストに戻って復習しましょう';
+  document.getElementById('sok').textContent=score;
+  document.getElementById('sng').textContent=qList.length-score;
+  document.getElementById('stot').textContent=qList.length;
+}
+
+// ── FLASH CARDS (30枚) ──
+const FC=[
+  {f:'静脈内注射',s:'薬理総論：与薬方法',b:'血中濃度上昇が最も速い。経口投与は初回通過効果で最も遅い。舌下投与（ニトログリセリン）は初回通過効果を回避。'},
+  {f:'PT-INR\nvs\nAPTT',s:'抗凝固薬の効果判定',b:'ワルファリン → PT-INR（目標2.0〜3.0）\nヘパリン → APTT\n混同しない！'},
+  {f:'エナラプリル\n（ACE阻害薬）',s:'降圧薬',b:'空咳（10〜20%）が特徴。ブラジキニン蓄積が原因。高K血症・血管神経性浮腫。妊婦禁忌。ARBは空咳なし。'},
+  {f:'アムロジピン\n（Ca拮抗薬）',s:'降圧薬',b:'長時間作用型。下肢浮腫（10〜15%）・歯肉肥厚が特徴。グレープフルーツ禁忌（CYP3A4阻害）。'},
+  {f:'フロセミド\n（ループ利尿薬）',s:'利尿薬',b:'低K血症・耳毒性（急速静注）が副作用。目標尿量1mL/kg/h。K<3.0mEq/Lで不整脈リスク。ジゴキシン中毒リスク↑。'},
+  {f:'ジゴキシン',s:'強心薬 / TDM必須',b:'中毒：黄色視・悪心・嘔吐・不整脈。低K血症で中毒リスク↑。TDM必須（1.0〜2.0 ng/mL）。'},
+  {f:'ニトログリセリン',s:'狭心症治療薬',b:'舌下投与（内服では初回通過効果で失活）。頭痛・起立性低血圧が副作用。'},
+  {f:'超速効型インスリン\n（ノボラピッド等）',s:'インスリン製剤',b:'食直前（0〜15分前）に投与。効果発現10〜20分。持効型（ランタス）は就寝前1回。速効型（R）は食前30分。'},
+  {f:'低血糖\n（インスリン等）',s:'内分泌：代謝',b:'症状：発汗・動悸・振戦・意識障害（血糖<70mg/dL）。意識あり→ブドウ糖10〜20g。意識なし→50%Glu静注orグルカゴン筋注。αGI使用中は必ずブドウ糖（砂糖無効）。'},
+  {f:'メトホルミン\n（BG薬）',s:'経口血糖降下薬',b:'2型糖尿病第一選択（肥満型）。肝臓の糖新生抑制。乳酸アシドーシス（重篤）に注意。腎機能低下で禁忌。低血糖少ない。'},
+  {f:'チアマゾール（MMI）',s:'抗甲状腺薬',b:'バセドウ病の治療。無顆粒球症が重大副作用。急な発熱・咽頭痛→緊急受診。妊婦にはPTU推奨（早期）。'},
+  {f:'ビスホスホネート\n（アレンドロン酸等）',s:'骨粗鬆症治療薬',b:'服用後30分は上体を起こす（食道炎予防）。空腹時に水で服用。顎骨壊死に注意。歯科処置前に休薬検討。'},
+  {f:'吸入ステロイド（ICS）\n（フルチカゾン等）',s:'気管支喘息治療薬',b:'喘息長期管理の第一選択。吸入後は必ずうがい（口腔カンジダ症・声枯れ予防）。β遮断薬で効果↓。'},
+  {f:'テオフィリン',s:'気管支拡張薬 / TDM必須',b:'気管支喘息・COPD。有効域5〜15µg/mL（TDM必須）。中毒：頭痛・嘔吐・不整脈・痙攣。'},
+  {f:'オメプラゾール\nランソプラゾール\n（PPI）',s:'消化器系',b:'最強の胃酸分泌抑制薬。H.pylori除菌療法に使用。長期使用で低Mg血症・骨折リスク。'},
+  {f:'バンコマイシン',s:'抗菌薬 / TDM必須',b:'MRSA治療薬。腎毒性・耳毒性。TDM必須。急速静注でRed man症候群（顔・上半身の紅潮）。'},
+  {f:'リファンピシン',s:'抗結核薬',b:'結核の第一選択薬の一つ。尿・汗・涙・唾液が橙赤色に変色（患者への事前説明が重要）。CYP誘導→多剤相互作用あり。'},
+  {f:'シスプラチン',s:'抗癌薬（白金製剤）',b:'腎毒性（特徴的）・聴器毒性・強い嘔吐。骨髄抑制は比較的少ない。十分な補液（尿量確保）が必須。'},
+  {f:'ドキソルビシン',s:'抗癌薬（アントラサイクリン）',b:'心毒性（心筋症）・骨髄抑制・脱毛。尿が赤くなる（事前説明）。心エコーで心機能モニタリング。'},
+  {f:'パクリタキセル',s:'抗癌薬（タキサン系）',b:'末梢神経障害・過敏反応・脱毛。前投薬（ステロイド・抗ヒスタミン薬）が必須。'},
+  {f:'骨髄抑制\n（抗癌薬共通）',s:'抗癌薬の副作用',b:'白血球↓（感染）・赤血球↓（貧血）・血小板↓（出血）。ナジール：投与後7〜14日が最低値。感染予防・転倒予防が重要。'},
+  {f:'モルヒネ\nオキシコドン\nフェンタニル',s:'強オピオイド鎮痛薬',b:'便秘（必発→緩下薬を必ず予防投与）・悪心・眠気・呼吸抑制。拮抗薬：ナロキソン。'},
+  {f:'インフリキシマブ\n（生物学的製剤）',s:'リウマチ・免疫抑制',b:'TNF-α阻害薬。結核の再活性化リスク→投与前にQFT検査必須。易感染。'},
+  {f:'ハロペリドール\n（定型抗精神病薬）',s:'精神神経系',b:'EPS（アカシジア・パーキンソン症状・遅発性ジスキネジア）が多い。悪性症候群（高体温・筋強剛・CPK↑）に注意。'},
+  {f:'悪性症候群',s:'抗精神病薬の重大副作用',b:'高体温・筋強剛・意識障害・CPK上昇。抗精神病薬全般で起こりうる。即時中止・支持療法（ダントロレン等）。'},
+  {f:'炭酸リチウム',s:'気分安定薬 / TDM必須',b:'有効域0.6〜1.2 mEq/L。中毒：振戦・嘔吐・意識障害・構音障害。NSAIDsで中毒リスク↑。双極性障害の躁状態に有効。'},
+  {f:'フルボキサミン\nパロキセチン\n（SSRI）',s:'抗うつ薬',b:'第一選択薬。MAOI との併用禁忌（セロトニン症候群）。中断症候群注意（漸減中止）。効果発現：2〜4週間。'},
+  {f:'β遮断薬',s:'自律神経 / 禁忌',b:'気管支喘息・徐脈に禁忌（気管支収縮）。高血圧・狭心症・心不全に使用。低血糖をマスクする。'},
+  {f:'抗コリン薬\n（アトロピン）',s:'自律神経 / 禁忌',b:'緑内障・前立腺肥大症に禁忌。気管支喘息・消化性潰瘍に適応。有機リン中毒の解毒薬として使用。'},
+  {f:'KCl（塩化カリウム）\n原液静注',s:'輸液管理 / 最重要',b:'原液急速静注→心停止！必ず希釈して緩徐に投与。医師の指示を厳守。電解質補正の基本。'},
+];
+
+let fcList=[...FC],fcIdx=0,fcFlip=false;
+function renderFC(){
+  const c=fcList[fcIdx];
+  document.getElementById('fcard').classList.remove('fl');
+  fcFlip=false;
+  document.getElementById('ffront').textContent=c.f;
+  document.getElementById('ffsub').textContent=c.s;
+  document.getElementById('fback').textContent=c.b;
+  document.getElementById('fcnt').textContent=`${fcIdx+1} / ${fcList.length}`;
+}
+function flipFC(){fcFlip=!fcFlip;document.getElementById('fcard').classList.toggle('fl',fcFlip);}
+function prevFC(){fcIdx=(fcIdx-1+fcList.length)%fcList.length;renderFC();}
+function nextFC(){fcIdx=(fcIdx+1)%fcList.length;renderFC();}
+function shuffleFC(){fcList.sort(()=>Math.random()-0.5);fcIdx=0;renderFC();}
+
+initQ();renderFC();
+</script>
+</body>
+</html>
